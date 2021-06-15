@@ -1,0 +1,21 @@
+{
+    "header" :
+    {
+        "platform" : "nutekt-digital",
+        "module" : "osc",
+        "api" : "1.1-0",
+        "dev_id" : 0,
+        "prg_id" : 0,
+        "version" : "1.0-0",
+        "name" : "Template",
+        "num_param" : 6,
+        "params" : [
+            ["Param1", 0, 100, ""],
+            ["Param2", 0, 100, ""],
+            ["Param3", 0, 100, ""],
+            ["Param4", 0, 100, ""],
+            ["Param5", 0, 100, ""],
+            ["Param6", 0, 100, ""]
+        ]
+    }
+}
