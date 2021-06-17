@@ -19,6 +19,7 @@ Build system is based on my fork of logue-sdk, but can be easily retargeted to v
 
 ### Setup
 Follow logue-sdk initialization procedure described in the corresponding documentation.
+In order to perform automated unit load and selection you need to install [logue-cli](logue-sdk/tools/logue-cli) from logue-sdk and [SendMIDI](https://github.com/gbevin/SendMIDI) and make sure to put them somewhere accessible with PATH variable.
 Open folder in VSCode, then you will be proposed to download dependent plugins, which is stated in [extensions.json](.vscode/extensions.json)
 
 ### Build options
@@ -27,15 +28,18 @@ Open folder in VSCode, then you will be proposed to download dependent plugins, 
 * Build NTS-1 units : build all units for NTS-1 only.
 * Build prologue units : build all units for prologue only.
 * Clean all : delete all intermediat build files and unit files.
-* Update SVD files : download System View Description files which is needed for debug on the real synth
+* Load unit : load selected unit to the last slot of the compatible synth and select it.
+* Update SVD files : download System View Description files which is needed for debug on the real synth.
 
 ### Debugging
 * Run Update SVD files (only needed for the first time)
-* Connect to one of the synth's SWD interfaces with the supported USB-dongle, like ST-LINK or J-Link (refer to [Cortex Debug](https://github.com/Marus/cortex-debug) plugin)
-* Build target unit, upload it to the synth with the Librarian or logue-cli and activate the unit on the synth.
-* Open the *.elf* file inside of the *build* directory of the unit
-* Activate *Run and Debug* tab
-* From the *Run and Debug* dropdown list select the option, which is suitable for the unit type, synth model and debugger option
+* Connect synth with USB port.
+* Connect to one of the synth's SWD interfaces with the supported USB-dongle, like ST-LINK or J-Link (refer to [Cortex Debug](https://github.com/Marus/cortex-debug) plugin).
+* Build target unit with one of the *Build \** tasks
+* Load and select the unit on the synth either manually or by selecting the *\*.\*unit* file and running *Load unit* task.
+* Select the *.elf* file inside of the *build* directory of the unit.
+* Activate *Run and Debug* tab.
+* From the *Run and Debug* dropdown list select the option, which is suitable for the unit type, synth model and debugger option.
 
 ### Credits
 * [tokuhira](https://github.com/tokuhira) for debug options clarification.

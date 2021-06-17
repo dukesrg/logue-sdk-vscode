@@ -95,6 +95,17 @@
         },
         {
             "type": "shell",
+            "label": "Load unit",
+            "command": [
+                "bash"
+            ],
+            "args": [
+                "${workspaceFolder}/.vscode/loadunit.sh",
+                "${file}"
+            ]
+        },
+        {
+            "type": "shell",
             "label": "Update SVD files",
             "options": {
                 "cwd": "${workspaceFolder}"
