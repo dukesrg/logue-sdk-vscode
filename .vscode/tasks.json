@@ -106,6 +106,17 @@
         },
         {
             "type": "shell",
+            "label": "Dump all units",
+            "command": [
+                "bash"
+            ],
+            "args": [
+                "${workspaceFolder}/.vscode/dumpunits.sh"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
             "label": "Update SVD files",
             "options": {
                 "cwd": "${workspaceFolder}"

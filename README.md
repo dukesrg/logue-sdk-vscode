@@ -20,6 +20,7 @@ Build system is based on my fork of logue-sdk, but can be easily retargeted to v
 ### Setup
 Follow logue-sdk initialization procedure described in the corresponding documentation.
 In order to perform automated unit load and selection you need to install [logue-cli](logue-sdk/tools/logue-cli) from logue-sdk and [SendMIDI](https://github.com/gbevin/SendMIDI) and make sure to put them somewhere accessible with PATH variable.
+For dumping option both [SendMIDI](https://github.com/gbevin/SendMIDI) and [ReceiveMIDI](https://github.com/gbevin/ReceiveMIDI) are required to be installed.
 Open folder in VSCode, then you will be proposed to download dependent plugins, which is stated in [extensions.json](.vscode/extensions.json)
 
 ### Build options
@@ -29,6 +30,7 @@ Open folder in VSCode, then you will be proposed to download dependent plugins, 
 * Build prologue units : build all units for prologue only.
 * Clean all : delete all intermediat build files and unit files.
 * Load unit : load selected unit to the last slot of the compatible synth and select it.
+* Dump all units : download all units from the first connected synth.
 * Update SVD files : download System View Description files which is needed for debug on the real synth.
 
 ### Debugging
