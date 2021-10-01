@@ -19,7 +19,7 @@ for UNITTYPE in modfx delfx revfx osc; do
         sleep 2
         kill $(ps | awk '/receivemidi/{print $1}')
         NAME=$(.vscode/dumpunit ${UNITTYPE}${INDEX}.syx | head -n1 | cut -d/ -f1)
-         ([ -d "$NAME" ] && echo -n "\"${NAME}\" " && mv ${UNITTYPE}${INDEX}.syx "$NAME-$UNITTYPE.syx" && echo -n "$NAME-$UNITTYPE.syx " && zip -r -m -q "$NAME-$UNITTYPE.${EXTENSIONS[$DEVICEID]}" "$NAME" && echo $NAME-$UNITTYPE.${EXTENSIONS[$DEVICEID]}) || echo free.
+         ([ -d "$NAME" ] && echo -n "\"${NAME}\" " && mv ${UNITTYPE}${INDEX}.syx "$NAME-$UNITTYPE.syx" && echo -n "$NAME-$UNITTYPE.syx " && zip -r -m -q "$NAME-$UNITTYPE.${EXTENSIONS[$DEVICEID]}" "$NAME" && echo $NAME-$UNITTYPE.${EXTENSIONS[$DEVICEID]}) || (rm -f ${UNITTYPE}${INDEX}.syx && echo free.)
         (( INDEX += 1 ))
     done    
     echo
