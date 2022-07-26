@@ -122,7 +122,7 @@
                 "cwd": "${workspaceFolder}"
             },
             "command": [
-                "(test -f STM32F446.svd && test -f STM32F401.svd) || (wget https://www.st.com/resource/en/svd/stm32f4_svd.zip && unzip -jo stm32f4_svd.zip */STM32F446.svd */STM32F401.svd && rm stm32f4_svd.zip)"
+                "(test -f STM32F446.svd && test -f STM32F401.svd) || (wget https://www.st.com/resource/en/svd/stm32f4_svd.zip && unzip -jo stm32f4_svd.zip '*/STM32F446.svd' '*/STM32F401.svd' && rm stm32f4_svd.zip)"
             ]
         }
     ]
